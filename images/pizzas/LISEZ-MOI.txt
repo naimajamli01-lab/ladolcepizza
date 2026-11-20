@@ -1,0 +1,48 @@
+Photos des pizzas
+=================
+Déposez ici une photo par pizza, au format JPG, nommée comme ci-dessous.
+Format conseillé : paysage 16:10, environ 1200 x 750 px, moins de 300 Ko.
+Une pizza sans photo s'affiche simplement sans image.
+
+Les Classiques
+  margherita.jpg   (Margherita)
+  regina.jpg   (Régina)
+  campione.jpg   (Campione)
+  paysanne.jpg   (Paysanne)
+  pepperona.jpg   (Pepperona)
+  calzone.jpg   (Calzone)
+
+Les Exclusives
+  vegetarienne.jpg   (Végétarienne)
+  grada-padano.jpg   (Grada Padano)
+  italienne.jpg   (Italienne)
+  4-jambons.jpg   (4 Jambons)
+  4-saisons.jpg   (4 Saisons)
+  boursin.jpg   (Boursin)
+  fermiere.jpg   (Fermière)
+  savoyarde.jpg   (Savoyarde)
+  pizza-du-chef.jpg   (Pizza du Chef)
+  sicilienne.jpg   (Sicilienne)
+
+Les Gourmets
+  caprese.jpg   (Caprese)
+  capri.jpg   (Capri)
+  a-la-rucola.jpg   (A la Rucola)
+  4-fromages.jpg   (4 Fromages)
+  san-pietro.jpg   (San Pietro)
+  napolitaine.jpg   (Napolitaine)
+  orientale.jpg   (Orientale)
+  san-marco.jpg   (San Marco)
+  raclette.jpg   (Raclette)
+  tartiflette.jpg   (Tartiflette)
+  fromaggi.jpg   (Fromaggi)
+  chevre-miel.jpg   (Chèvre Miel)
+  rimini.jpg   (Rimini)
+  poulette.jpg   (Poulette)
+
+Les Suprêmes
+  5-fromages.jpg   (5 Fromages)
+  5-saisons.jpg   (5 Saisons)
+  buratta.jpg   (Buratta)
+  venezia.jpg   (Venezia)
+  extravaganza.jpg   (Extravaganza)
