@@ -12,6 +12,16 @@
   const sizeLabel = id => SIZES.find(s => s.id === id).label;
   const sizeIdx = id => SIZES.findIndex(s => s.id === id);
 
+  /* Un ingrédient déjà présent dans la recette n'est pas proposé en supplément. */
+  const norm = s => s.toLowerCase().replace(/œ/g, "oe").normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const ING_KEYS = {
+    "Mozzarella": "mozzarella(?! fraiche)", "Mozzarella fraîche": "mozzarella fraiche",
+    "Viande hachée": "viande hache", "Saumon fumé": "saumon", "Basilic frais": "basilic",
+    "Aubergines marinées": "aubergine", "Courgettes marinées": "courgette",
+    "Tomates fraîches": "tomates? fraiche", "Tomates cerises": "tomates? cerise", "Pommes de terre": "pommes? de terre"
+  };
+  const hasIng = (p, n) => new RegExp(ING_KEYS[n] || norm(n).replace(/s$/, "")).test(norm(p.desc));
+
   /* ---------- État ---------- */
   const STORE = "dolcepizza-cart-v1";
   const state = { mode: "emp", cart: [], view: "cart", form: { name: "", phone: "", address: "", slot: "", note: "" }, pay: "card", done: null };
@@ -201,7 +211,7 @@
           ${p.choices.options.map((o, i) => `<label class="opt"><input type="radio" name="choice" value="${esc(o)}" ${i === 0 ? "checked" : ""}><span>${esc(o)}</span></label>`).join("")}
         </div></fieldset>` : ""}
         <fieldset class="field"><legend>Ingrédients en plus <span data-xprice></span></legend><div class="opts checks">
-          ${INGREDIENTS.map(n => `<label class="opt"><input type="checkbox" name="extra" value="${esc(n)}"><span>${esc(n)}</span></label>`).join("")}
+          ${INGREDIENTS.filter(n => !hasIng(p, n)).map(n =>`<label class="opt"><input type="checkbox" name="extra" value="${esc(n)}"><span>${esc(n)}</span></label>`).join("")}
         </div></fieldset>
         <div class="field rowline"><span class="lbl" style="margin:0">Quantité</span>
           <span class="stepper"><button type="button" data-step="qty" data-d="-1" aria-label="Moins">−</button><output data-out="qty">1</output><button type="button" data-step="qty" data-d="1" aria-label="Plus">+</button></span></div>
